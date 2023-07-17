@@ -67,7 +67,7 @@ function leer(){
     if (accion == 2){//Ingresar monto
         ingresando = prompt("Por favor digitar el valor del monto a ingresar")
         alerta = parseInt(ingresando) + cuentas[nombre].saldo
-        if (alerta>990){
+        if (alerta>990||!isNaN(alerta)== false){
             alert("El valor ingresado no es valido recuerda que la cuenta no puede exceder $990") 
         }  
         else{
@@ -79,7 +79,7 @@ function leer(){
     if (accion == 3){//Retirar monto
         retirando = prompt("Por favor digitar el valor del monto a retirar")
         alerta =  cuentas[nombre].saldo - parseInt(retirando)
-        if (alerta<10){
+        if (alerta<10 ||!isNaN(alerta)== false){
             alert("El valor a retirar no es valido, recuerda que la cuenta no puede tener menos de $10") 
         }  
         else{
